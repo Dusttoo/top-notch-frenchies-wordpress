@@ -1,1 +1,1 @@
-# top-notch-frenchies-wordpress
+# wordpress-tutorial
