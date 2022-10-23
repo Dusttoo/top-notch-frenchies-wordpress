@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <section class=''>
-  <div class='flex justify-between items-center p-6'>
+  <div class='flex justify-center items-center p-6'>
     <div>
         <h1 class="sm:mt-8 text-2xl lg:text-4xl lg:text-5xl font-semibold"><?php the_title(); ?></h1>
     </div>
@@ -42,7 +42,7 @@
       <?php } ?>
     </div>
   </div>
-  <div class="">
+  <div class="p-6">
       <?php the_content() ?>
     </div>
 </section>

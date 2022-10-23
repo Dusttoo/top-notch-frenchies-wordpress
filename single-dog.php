@@ -2,27 +2,21 @@
     get_header(); 
     while(have_posts()) {
         the_post(); ?>
-    <div class="">
-    <div class="">
-        <p>
-            <a class="" href="<?php echo get_post_type_archive_link('dog'); ?>">
-            <i class="fa fa-home" aria-hidden="true"></i> 
-            Dogs Home</a> 
-            <span class="">
-                <?php the_title() ?>
-            </span>
-        </p>
-    </div>
 
-        <div class=''>
-        <?php 
-        ?>
-            <img src="<?php echo get_field('images')?>"/>
-           <p> <?php echo get_field('gender')[0] ; ?> </p>
-            <p> <?php echo get_field('description') ; ?> </p>
 
+    <div class='p-10 flex-col'>
+        <img class="h-56 rounded-lg" src="<?php echo get_field('images') ?>"/>
+        <div class='p-8'>
+            <h1 class='text-center text-3xl'><?php the_title(); ?></h1>
+            <p class='text-center'><?php the_content() ?></p>
+        </div>
+        <div class='flex items-center justify-center'>
+            <div>
+                <a href="<?php echo get_field('pedigree_link') ?>" target="_blank" rel="noreferrer">Pedigree</a>
+            </div>
         </div>
     </div>
+
    <?php }
    get_footer();
    ?>
