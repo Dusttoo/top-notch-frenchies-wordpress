@@ -1,23 +1,32 @@
 <?php 
     get_header(); 
     while(have_posts()) {
-        the_post(); ?>
-
-    <div class="metabox metabox--position-up metabox--with-home-link">
-        <p>
-            <a class="metabox__blog-home-link" href="<?php echo get_post_type_archive_link('dog'); ?>">
-            <i class="fa fa-home" aria-hidden="true"></i> 
-            All Dogs</a> 
-            <span class="metabox__main">
-                <?php the_title() ?>
-            </span>
-        </p>
-    </div>
+        the_post(); 
+        returnTo('dog', 'Dogs')
+        ?>
+    
     <div class='p-10 flex-col'>
-        <img class="h-56 rounded-lg" src="<?php the_post_thumbnail_url() ?>"/>
         <div class='p-8'>
-            <h1 class='text-center text-3xl'><?php the_title(); ?></h1>
-            <p class='text-center'><?php the_content() ?></p>
+        <section class="overflow-hidden text-gray-700 ">
+        <div class="container px-5 py-2 mx-auto lg:pt-12 lg:px-32">
+            <div class="flex flex-wrap -m-1 md:-m-2">
+            <?php 
+                $images = get_field('images');
+                foreach($images as $image) { ?>
+                <div class="flex flex-wrap w-1/3">
+                    <div class="w-full p-1 md:p-2">
+                        <img 
+                        alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                        src="<?php echo $image['sizes']['dogThumbnail']; ?>"/>
+                    </div>
+                </div>
+                <?php }
+            ?>
+            </div>
+        </div>
+        </section>
+        <h1 class='text-center text-3xl'><?php the_title(); ?></h1>
+        <p class='text-center'><?php the_content() ?></p>
         </div>
         <div class='flex items-center justify-center'>
             <div>
@@ -29,3 +38,5 @@
    <?php }
    get_footer();
    ?>
+
+

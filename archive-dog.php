@@ -6,6 +6,8 @@
   <a href="<?php echo site_url('/females') ?>">Females</a>
   <a href="<?php echo site_url('/productions') ?>">Productions</a>
   <a href="<?php echo site_url('/retired') ?>">Retired</a>
+  <a href="<?php echo site_url('/available') ?>">Available</a>
+  <a href="<?php echo site_url('/breedings') ?>">Planned Breedings</a>
   </div>
 </div>
 

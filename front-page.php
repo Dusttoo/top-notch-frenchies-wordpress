@@ -17,7 +17,37 @@
           </div>
 
             <p class="sm:max-w-3xl sm:mx-auto mb-12 sm:text-xl text-gray-500 p-4">
-            <?php the_content() ?>
+            <?php 
+            $allAvailable = new WP_Query(array(
+              'post_type' => 'litter',
+              'posts_per_page' => -1,
+            ));
+            if($allAvailable) { ?>
+            <h2> Currently Available </h2>
+            <?php
+              while($allAvailable->have_posts()) {
+                $allAvailable->the_post(); 
+                DogTile();
+    
+            }
+            wp_reset_postdata();
+            } else {
+              $allBreedings = new WP_Query(array(
+                'post_type' => 'breeding',
+                'posts_per_page' => -1,
+              ));
+              if($allBreedings) { ?>
+              <h2> Upcoming Breedings </h2>
+              <?php
+                while($allBreedings->have_posts()) {
+                  $allBreedings->the_post(); 
+                  DogTile();
+              } 
+              }
+            }
+            wp_reset_postdata();
+            the_content() 
+            ?>
             </p>
 
           </div>

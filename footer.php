@@ -1,6 +1,6 @@
 <footer class="py-20 bg-orange-10">
     <div class="container mx-auto px-4">
-        <div class="pb-6 sm:flex justify-center items-center lg:pb-10 border-b border-gray-100">
+        <div class="pb-6 sm:flex justify-between items-center lg:pb-10 border-b border-gray-100">
             <div class="md:flex flex-wrap items-start justify-between">
                 <div class="w-full lg:w-auto text-white">
                     <p class='text-white'>Kristen Harper</p>
