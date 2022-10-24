@@ -20,7 +20,7 @@
       ));
         while($allDogs->have_posts()) {
             $allDogs->the_post(); 
-            if(get_field('gender')[0] == 'Female') {
+            if(get_field('production')) {
         ?>
         <a class='' href="<?php the_permalink() ?>">
           <div class='container bg-tan rounded border-solid border-4 border-orange-10 h-auto lg:w-64 sm:w-56 p-4 m-4 grid-cols-1 place-items-center hover:cursor-pointer hover:border-transparent'>
