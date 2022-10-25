@@ -49,6 +49,8 @@
         add_theme_support('title-tag');
         add_theme_support('post-thumbnails');
         add_image_size('dogThumbnail', 260, 260, true);
+        add_image_size('breedingThumbnail', 400, 400, true);
+
     }
     add_action('after_setup_theme', 'topnotch_features');
 ?>

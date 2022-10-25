@@ -4,7 +4,6 @@
         the_post(); 
         returnTo('dog', 'Dogs')
         ?>
-    
     <div class='p-10 flex-col'>
         <div class='p-8'>
         <section class="overflow-hidden text-gray-700 ">
@@ -26,7 +25,7 @@
         </div>
         </section>
         <h1 class='text-center text-3xl'><?php the_title(); ?></h1>
-        <p class='text-center'><?php the_content() ?></p>
+        <p class=''><?php the_content() ?></p>
         </div>
         <div class='flex items-center justify-center'>
             <div>
