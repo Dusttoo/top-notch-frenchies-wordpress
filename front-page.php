@@ -24,13 +24,15 @@
             ));
             if($allAvailable) { ?>
             <h2> Currently Available </h2>
+            <div class='flex'>
             <?php
               while($allAvailable->have_posts()) {
                 $allAvailable->the_post(); 
                 DogTile();
     
-            }
-            wp_reset_postdata();
+            } ?>
+            </div>
+            <?php wp_reset_postdata();
             } else {
               $allBreedings = new WP_Query(array(
                 'post_type' => 'breeding',
@@ -38,14 +40,16 @@
               ));
               if($allBreedings) { ?>
               <h2> Upcoming Breedings </h2>
+              <div class='flex'>
               <?php
                 while($allBreedings->have_posts()) {
                   $allBreedings->the_post(); 
                   DogTile();
               } 
               }
-            }
-            wp_reset_postdata();
+            } ?>
+            </div>
+            <?php wp_reset_postdata();
             the_content() 
             ?>
             </p>

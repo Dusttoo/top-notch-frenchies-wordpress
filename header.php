@@ -7,7 +7,7 @@
 </head>
 <body <?php body_class() ?>>
   <div>
-    <header class="py-8 bg-orange-10">
+    <header class="site-header__menu py-8 bg-orange-10">
         <div class="container px-4 mx-auto">
             <nav class="relative">
                 <div class="flex justify-between items-center">
@@ -15,7 +15,7 @@
                         <img class="w-1/4" src="https://i.imgur.com/YJIGdZU.png" alt="texas top notch frenchies logo" />
                     </a>
                     <div class="">
-                        <button class="flex items-center p-3 rounded" >
+                        <button class="site-header__menu-trigger flex items-center p-3 rounded" >
                             <i class=" fa fa-bars text-3xl p-2 rounded text-white hover:text-orange-10 hover:bg-white" aria-hidden="true"></i>
                         </button>
                     </div>
